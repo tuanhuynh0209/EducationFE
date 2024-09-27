@@ -1,11 +1,17 @@
-
 import './App.css';
+import TopNav from './TopNav/TopNav';
+import { BrowserRouter, Router } from 'react-router-dom';
+import Routerr from '../src/routes/Router';
+
 
 function App() {
   return (
-    <div className="App">
-      Medical Traning
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <TopNav />
+        <Routerr/>
+      </div>
+    </BrowserRouter>
   );
 }
 

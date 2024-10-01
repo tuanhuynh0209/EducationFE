@@ -1,11 +1,176 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ArrowDropDownOutlined, ArrowDropUpOutlined } from "@mui/icons-material";
 
+const data = [
+  {
+    year: 2024,
+    name: 'Trần Duy Thanh',
+    employeeId: 'A29-203',
+    base: 'Cơ sở 1',
+    department: 'Khoa Chẩn đoán hình ảnh',
+    jobTitle: 'Bác sĩ hoặc Thạc sĩ các chuyên ngành khác',
+    type: 'Viên chức cơ hữu UMC',
+    researchHours: 30,
+    reducedCase: 'Trường hợp 1',
+    days: 0,
+    researchQuota: 0,
+    notes: 'Trống'
+  },
+  {
+    year: 2024,
+    name: 'Tiêu Trí Quang',
+    employeeId: 'A29-204',
+    base: 'Cơ sở 2',
+    department: 'Khoa Ngoại tổng quát',
+    jobTitle: 'Thạc sĩ chuyên ngành Ngoại khoa',
+    type: 'Viên chức cơ hữu UMC',
+    researchHours: 40,
+    reducedCase: 'Trường hợp 2',
+    days: 2,
+    researchQuota: 0,
+    notes: 'Trống'
+  },
+  {
+    year: 2024,
+    name: 'Đặng Duy Thái',
+    employeeId: 'A29-205',
+    base: 'Cơ sở 3',
+    department: 'Khoa Nội tổng quát',
+    jobTitle: 'Bác sĩ Nội khoa',
+    type: 'Viên chức cơ hữu UMC',
+    researchHours: 35,
+    reducedCase: 'Trường hợp 3',
+    days: 1,
+    researchQuota: 0,
+    notes: 'Trống'
+  },
+  {
+    year: 2024,
+    name: 'Nguyễn Thành Duy',
+    employeeId: 'A29-204',
+    base: 'Cơ sở 2',
+    department: 'Khoa Ngoại tổng quát',
+    jobTitle: 'Thạc sĩ chuyên ngành Ngoại khoa',
+    type: 'Viên chức cơ hữu UMC',
+    researchHours: 40,
+    reducedCase: 'Trường hợp 2',
+    days: 2,
+    researchQuota: 0,
+    notes: 'Trống'
+  },
+  {
+    year: 2024,
+    name: 'Nguyễn Đức Vinh',
+    employeeId: 'A29-205',
+    base: 'Cơ sở 3',
+    department: 'Khoa Nội tổng quát',
+    jobTitle: 'Bác sĩ Nội khoa',
+    type: 'Viên chức cơ hữu UMC',
+    researchHours: 35,
+    reducedCase: 'Trường hợp 3',
+    days: 1,
+    researchQuota: 0,
+    notes: 'Trống'
+  },
+  {
+    year: 2024,
+    name: 'Ngô Trần Hoàng Phát',
+    employeeId: 'A29-204',
+    base: 'Cơ sở 2',
+    department: 'Khoa Ngoại tổng quát',
+    jobTitle: 'Thạc sĩ chuyên ngành Ngoại khoa',
+    type: 'Viên chức cơ hữu UMC',
+    researchHours: 40,
+    reducedCase: 'Trường hợp 2',
+    days: 2,
+    researchQuota: 0,
+    notes: 'Trống'
+  },
+  {
+    year: 2024,
+    name: 'Huỳnh Vũ Anh Tuấn',
+    employeeId: 'A29-205',
+    base: 'Cơ sở 3',
+    department: 'Khoa Nội tổng quát',
+    jobTitle: 'Bác sĩ Nội khoa',
+    type: 'Viên chức cơ hữu UMC',
+    researchHours: 35,
+    reducedCase: 'Trường hợp 3',
+    days: 1,
+    researchQuota: 0,
+    notes: 'Trống'
+  }
+];
 
 const Information = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
-    <>
-      information
-    </>
+    <div className='mx-8 bg-orange-400 w-full'>
+      <div className='bg-slate-400 w-full'>
+        <span className='text-3xl font-semibold text-white'>THÔNG TIN VIÊN CHỨC</span>
+      </div>
+      <div className="bg-slate-300 w-full mt-5">
+        <table className="table-auto w-full text-center" style={{ tableLayout: 'fixed' }}>
+          <thead>
+            <tr className="bg-gray-800 text-white border-b-2">
+              <th className="p-2">Năm áp dụng</th>
+              <th className="p-2">Họ và tên</th>
+              <th className="p-2">Mã số nhân viên</th>
+              <th className="p-2">Cơ sở</th>
+              <th className="p-2">Đơn vị</th>
+              <th className="p-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((person, index) => (
+              <React.Fragment key={index}>
+                <tr className="bg-gray-800 text-white border-b-2 border-white">
+                  <td className="p-2">{person.year}</td>
+                  <td className="p-2">{person.name}</td>
+                  <td className="p-2">{person.employeeId}</td>
+                  <td className="p-2">{person.base}</td>
+                  <td className="p-2">{person.department}</td>
+                  <td className="p-2">
+                    <button onClick={() => toggleExpand(index)}>
+                      {expandedIndex === index ? <ArrowDropUpOutlined /> : <ArrowDropDownOutlined />}
+                    </button>
+                  </td>
+                </tr>
+                <tr className={`transition-all duration-300 ${expandedIndex === index ? '' : 'hidden'}`}>
+                  <td className="p-4" colSpan="5">
+                    <div className="grid grid-cols-2 gap-8 text-left bg-gray-100 rounded-lg shadow-lg p-6">
+                      <div>
+                        <p className="font-semibold text-gray-700 mb-2">Chức danh, trình độ</p>
+                        <p className="font-semibold text-gray-700 mb-2">Viên chức hữu cơ</p>
+                        <p className="font-semibold text-gray-700 mb-2">Số giờ nghiên cứu khoa học định mức trong năm</p>
+                        <p className="font-semibold text-gray-700 mb-2">Trường hợp giảm định mức</p>
+                        <p className="font-semibold text-gray-700 mb-2">Số ngày</p>
+                        <p className="font-semibold text-gray-700 mb-2">Định mức giờ NCKH</p>
+                        <p className="font-semibold text-gray-700 mb-2">Ghi chú</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-600 mb-2">{person.jobTitle}</p>
+                        <p className="text-gray-600 mb-2">{person.type}</p>
+                        <p className="text-gray-600 mb-2">{person.researchHours}</p>
+                        <p className="text-gray-600 mb-2">{person.reducedCase}</p>
+                        <p className="text-gray-600 mb-2">{person.days}</p>
+                        <p className="text-gray-600 mb-2">{person.researchQuota}</p>
+                        <p className="text-gray-600 mb-2">{person.notes}</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 };
 

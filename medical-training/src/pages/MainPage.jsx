@@ -10,7 +10,6 @@ import STL from '../image/STL1.svg';
 import TTVC from '../image/TTVC1.svg';
 import { NavLink, Outlet } from 'react-router-dom';
 import '../styles/sideBar.css';
-
 // Define your navigation links array
 const navLinks = [
     { path: "/func/information", icon: TTVC, display: "Thông tin viên chức" },
@@ -43,19 +42,23 @@ const MainPage = () => {
                 </div>
             </header>
 
-            <div className="p-3 flex justify-end">
+            <div className="p-3 flex justify-end text-center">
+                <NavLink to="/func/information/editInf"
+                        className='mt-4'>
+                    <span className='bg-[#F9A150] text-white rounded-lg font-semibold p-3.5 mr-4'>Chỉnh sửa</span>
+                </NavLink>
                 <input
                     type="text"
                     placeholder="Tìm kiếm..."
                     className="bg-[#F9A150] rounded-lg p-3.5 outline-none mb-4 text-white"
                 />
+                
             </div>
 
-
             {/* Main content */}
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row ">
                 {/* Left side - Sidebar */}
-                <aside className="w-full md:w-1/3 lg:w-1/4 p-4 bg-[#FDE4CC]">
+                <aside className="w-full md:w-1/3 lg:w-1/4 p-4 bg-[#FDE4CC] rounded-r-3xl">
 
 
                     <ul className="nav__list space-y-4">
@@ -77,7 +80,7 @@ const MainPage = () => {
 
                 {/* Right side - Main content */}
                 <div className='height-div2 h-full flex flex-row flex-wrap'>
-
+                    
                     <Outlet />
                 </div>
             </div>

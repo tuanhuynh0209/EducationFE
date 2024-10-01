@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import BBKH from '../image/BBKH.svg';
 import BCKH from '../image/BCKH.svg';
 import BTKDT from '../image/BTKDT.svg';

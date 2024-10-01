@@ -15,6 +15,8 @@ import Initiative from '../page/Initiative';
 import Statistic from '../page/Statistics';
 import MainPage from '../pages/MainPage';
 
+import EditInformation from '../pages/EditInformation';
+
 const Router = () => {
   return (
     <Routes>
@@ -28,6 +30,7 @@ const Router = () => {
 
       <Route path='/func' element={<MainPage/>}>
         <Route path='/func/information' element={<Information/>}/>
+        <Route path='/func/information/editInf' element={<EditInformation/>}/>
         <Route path='/func/scientificArticle' element={<ScientificArticle/>}/>
         <Route path='/func/scientificResearchTopic' element={<ScientificResearchTopic/>}/>
         <Route path='/func/scientificResearchCouncil' element={<ScientificResearchCouncil/>}/>

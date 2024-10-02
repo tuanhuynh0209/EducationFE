@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowDropDownOutlined, ArrowDropUpOutlined } from "@mui/icons-material";
-
+import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 const data = [
   {
     year: 2024,
@@ -103,6 +104,12 @@ const data = [
 ];
 
 const Information = () => {
+
+  const navigate = useNavigate();
+  const handleEditClick = () => {
+    navigate('/func/information/editInf');
+  };
+
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const toggleExpand = (index) => {
@@ -111,8 +118,15 @@ const Information = () => {
 
   return (
     <div className='mx-8 bg-orange-400 w-full'>
-      <div className='bg-slate-400 w-full'>
+      <div className='bg-slate-400 w-full relative flex items-center justify-center p-2'>
         <span className='text-3xl font-semibold text-white'>THÔNG TIN VIÊN CHỨC</span>
+        <button
+          onClick={handleEditClick}
+          className='absolute right-4 flex gap-1 font-semibold text-white bg-[#F9A150] p-2 rounded-sm'
+        >
+          <span>Chỉnh sửa</span>
+          <ModeEditOutlineOutlinedIcon className='text-white' />
+        </button>
       </div>
       <div className="bg-slate-300 w-full mt-5">
         <table className="table-auto w-full text-center" style={{ tableLayout: 'fixed' }}>

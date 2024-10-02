@@ -16,6 +16,7 @@ import Statistic from '../page/Statistics';
 import MainPage from '../pages/MainPage';
 
 import EditInformation from '../pages/EditInformation';
+import AddScientificArt from '../pages/AddScientificArt';
 
 const Router = () => {
   return (
@@ -32,6 +33,7 @@ const Router = () => {
         <Route path='/func/information' element={<Information/>}/>
         <Route path='/func/information/editInf' element={<EditInformation/>}/>
         <Route path='/func/scientificArticle' element={<ScientificArticle/>}/>
+        <Route path='/func/scientificArticle/addSciArt' element={<AddScientificArt/>}/>
         <Route path='/func/scientificResearchTopic' element={<ScientificResearchTopic/>}/>
         <Route path='/func/scientificResearchCouncil' element={<ScientificResearchCouncil/>}/>
         <Route path='/func/document' element={<Document/>}/>

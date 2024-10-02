@@ -43,10 +43,6 @@ const MainPage = () => {
             </header>
 
             <div className="p-3 flex justify-end text-center">
-                <NavLink to="/func/information/editInf"
-                        className='mt-4'>
-                    <span className='bg-[#F9A150] text-white rounded-lg font-semibold p-3.5 mr-4'>Chỉnh sửa</span>
-                </NavLink>
                 <input
                     type="text"
                     placeholder="Tìm kiếm..."

@@ -13,25 +13,32 @@ const EditInformation = () => {
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Năm áp dụng</p>
             </div>
-            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+            <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
+              <option value="">Chọn năm</option>
+              {Array.from({ length: 25 }, (_, i) => new Date().getFullYear() - i).map(year => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+            </select>
           </div>
+
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Họ và tên</p>
             </div>
-            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập họ tên' />
           </div>
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Mã số nhân viên</p>
             </div>
-            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập mã nhân viên' />
           </div>
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Cơ sở</p>
             </div>
             <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
+              <option value="">Chọn cơ sở</option>
               <option value="base1">Cơ sở 1</option>
               <option value="base2">Cơ sở 2</option>
               <option value="base3">Cơ sở 3</option>
@@ -45,6 +52,7 @@ const EditInformation = () => {
               {/* Các option được giữ nguyên */}
 
               {/* 63 */}
+              <option value="">Chọn đơn vi</option>
               <option value="unit1">Ban chuyên gia</option>
               <option value="unit2">Ban Giám đốc</option>
               <option value="unit3">Đơn vị Can thiệp nội mạch</option>
@@ -115,6 +123,7 @@ const EditInformation = () => {
               <p className='font-medium text-lg'>Chức danh, trình độ</p>
             </div>
             <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
+              <option value="">Chọn chức danh, trình độ</option>
               <option value="levelGS">Giáo sư</option>
               <option value="levelPGS">Phó Giáo sư</option>
               <option value="levelTS">Tiến sĩ</option>
@@ -128,13 +137,14 @@ const EditInformation = () => {
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Số giờ NCKH định mức trong năm</p>
             </div>
-            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập số giờ' />
           </div>
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Trường hợp giảm định mức</p>
             </div>
             <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
+              <option value="">Chọn trường hợp giảm định mức</option>
               <option value="noCase">Không thuộc trường hợp giảm định mức</option>
               <option value="case1">Trường hợp 1</option>
               <option value="case2">Trường hợp 2</option>
@@ -147,19 +157,19 @@ const EditInformation = () => {
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Số ngày nếu thuộc trường hợp 3</p>
             </div>
-            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập số ngày' />
           </div>
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Định mức giờ NCKH</p>
             </div>
-            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập định mức giờ NCKH' />
           </div>
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
               <p className='font-medium text-lg'>Ghi chú</p>
             </div>
-            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+            <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập ghi chú' />
           </div>
           <div className='w-full flex justify-center mt-6'>
             <button className='bg-[#F9A150] hover:bg-[#e08f40] rounded-lg p-4 text-lg w-fit px-20 font-bold text-white outline-none transition duration-300'>

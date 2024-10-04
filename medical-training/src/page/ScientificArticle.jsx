@@ -165,7 +165,7 @@ const ScientificArticle = () => {
 
   const navigate = useNavigate();
   const handleAddClick = () => {
-    navigate('/func/scientificArticle/addSciArt');
+    navigate('/func/scientificArticle/addSciArt') ;
   };
 
   const [expandedIndex, setExpandedIndex] = useState(null);

@@ -32,7 +32,7 @@ const AddScientificArt = () => {
                             <p className='font-medium text-lg'>Hoạt động</p>
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
-                            <option value="">Chọn hoạt động</option>
+                            <option value="">Ấn vào để chọn</option>
                             <option value="rangeSciArt1">Chưa có chỉ số ảnh hưởng (Impact Factor – IF) hoặc IF ≤ 0.5</option>
                             <option value="rangeSciArt2">Có chỉ số ảnh hưởng IF &gt; 0.5 (tính theo năm kê khai)</option>
                             <option value="rangeSciArt3">Chưa có trong danh mục tạp chí tính điểm công trình của Hội đồng Giáo sư Nhà nước</option>
@@ -79,7 +79,7 @@ const AddScientificArt = () => {
                             <p className='font-medium text-lg'>Ngôn ngữ xuất bản</p>
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
-                            <option value="">Chọn ngôn ngữ</option>
+                            <option value="">Ấn vào để chọn</option>
                             <option value="languageSciArt1">Tiếng Việt</option>
                             <option value="languageSciArt2">Tiếng Anh</option>
                             <option value="languageSciArt3">Tiếng Pháp</option>
@@ -92,7 +92,7 @@ const AddScientificArt = () => {
                             <p className='font-medium text-lg'>Phạm vi, cấp độ</p>
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
-                            <option value="">Chọn phạm vi</option>
+                            <option value="">Ấn vào để chọn</option>
                             <option value="rangeSciArt1">Chưa có chỉ số IF hoặc IF ≤ 0.5</option>
                             <option value="rangeSciArt2">Có chỉ số IF &gt; 0.5</option>
                             <option value="rangeSciArt3">Chưa có trong danh mục Hội đồng Giáo sư</option>
@@ -123,7 +123,7 @@ const AddScientificArt = () => {
                             <p className='font-medium text-lg'>Vai trò</p>
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
-                            <option value="">Chọn vai trò</option>
+                            <option value="">Ấn vào để chọn</option>
                             <option value="roleSciArt1">Tác giả đầu tiên</option>
                             <option value="roleSciArt2">Tác giả liên hệ</option>
                             <option value="roleSciArt3">Tác giả đầu tiên, tác giả liên hệ</option>

@@ -17,6 +17,10 @@ import MainPage from '../pages/MainPage';
 
 import EditInformation from '../pages/EditInformation';
 import AddScientificArt from '../pages/AddScientificArt';
+import AddScientificResTpc from '../pages/AddScientificResTpc';
+import AddSciResCou from '../pages/AddSciResCou';
+import AddDocument from '../pages/AddDocument';
+import AddScientificReport from '../pages/AddScientificReport';
 
 const Router = () => {
   return (
@@ -35,9 +39,13 @@ const Router = () => {
         <Route path='/func/scientificArticle' element={<ScientificArticle/>}/>
         <Route path='/func/scientificArticle/addSciArt' element={<AddScientificArt/>}/>
         <Route path='/func/scientificResearchTopic' element={<ScientificResearchTopic/>}/>
+        <Route path='/func/scientificResearchTopic/addSciResTpc' element={<AddScientificResTpc/>}/>
         <Route path='/func/scientificResearchCouncil' element={<ScientificResearchCouncil/>}/>
-        <Route path='/func/document' element={<Document/>}/>
+        <Route path='/func/scientificResearchCouncil/addSciResCou' element={<AddSciResCou/>}/>
+        <Route path='/func/document' element={<Document/>}/>  
+        <Route path='/func/document/addDocument' element={<AddDocument/>}/>
         <Route path='/func/scientificReport' element={<ScientificReport/>}/>
+        <Route path='/func/scientific/addSciReport' element={<AddScientificReport/>}/>
         <Route path='/func/scientificResearchProduct' element={<ScientificResearchProduct/>}/>
         <Route path='/func/initiative' element={<Initiative/>}/>
         <Route path='/func/statistic' element={<Statistic/>}/>

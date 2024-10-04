@@ -53,7 +53,7 @@ const ScientificReport = () => {
 
   const navigate = useNavigate();
   const handleAddClick = () => {
-    navigate('/func/scientific/addSciReport');
+    navigate('/func/scientificReport/addSciReport');
   };
 
   const [expandedIndex, setExpandedIndex] = useState(null);

@@ -45,7 +45,7 @@ const Router = () => {
         <Route path='/func/document' element={<Document/>}/>  
         <Route path='/func/document/addDocument' element={<AddDocument/>}/>
         <Route path='/func/scientificReport' element={<ScientificReport/>}/>
-        <Route path='/func/scientific/addSciReport' element={<AddScientificReport/>}/>
+        <Route path='/func/scientificReport/addSciReport' element={<AddScientificReport/>}/>
         <Route path='/func/scientificResearchProduct' element={<ScientificResearchProduct/>}/>
         <Route path='/func/initiative' element={<Initiative/>}/>
         <Route path='/func/statistic' element={<Statistic/>}/>

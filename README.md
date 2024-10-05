@@ -1,5 +1,5 @@
 # EducationFE
-
+```
 ---ascii
           _                 _   _             
          | |               | | (_)            
@@ -19,6 +19,7 @@ WEBSITE QUẢN LÝ ĐÀO TẠO VÀ NGHIÊN CỨU KHOA HỌC THUỘC BỆNH VIỆ
                                                     ( )_) |( )_| |
                                                      \___/'`\___/'
 ---ascii
+```
 Dự án sử dụng các công nghệ sau:
 
 ReactJS:

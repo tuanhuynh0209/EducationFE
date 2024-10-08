@@ -165,7 +165,7 @@ const ScientificArticle = () => {
 
   const navigate = useNavigate();
   const handleAddClick = () => {
-    navigate('/func/scientificArticle/addSciArt') ;
+    navigate('/func/scientificArticle/addSciArt');
   };
 
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -212,38 +212,77 @@ const ScientificArticle = () => {
                   </td>
                 </tr>
                 <tr className={`transition-all duration-300 ${expandedIndex === index ? '' : 'hidden'}`}>
+
                   <td className="p-4" colSpan="5">
-                    <div className="grid grid-cols-2 gap-8 text-left bg-gray-100 rounded-lg shadow-lg p-6">
-                      <div>
-                        <p className="font-semibold text-gray-700 mb-2">DOI, minh chứng bài báo</p>
-                        <p className="font-semibold text-gray-700 mb-2">Ngày</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tên tạp chí, kỷ yếu</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tên nhà xuất bản, đơn vị chủ quản</p>
-                        <p className="font-semibold text-gray-700 mb-2">Ngôn ngữ xuất bản</p>
-                        <p className="font-semibold text-gray-700 mb-2">Phạm vi, cấp độ </p>
-                        <p className="font-semibold text-gray-700 mb-2">Chỉ số Impact Factor(IF) nếu có</p>
-                        <p className="font-semibold text-gray-700 mb-2">Giờ chuẩn của hoạt động</p>
-                        <p className="font-semibold text-gray-700 mb-2">Vai trò</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tổng số thành viên cùng vai trò</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tống số tác giả</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tỷ lệ đóng góp</p>
-                        <p className="font-semibold text-gray-700 mb-2">Giờ quy đổi theo vai trò</p>
-                      </div>
-                      <div>
-                        <p className="text-gray-600 mb-2">{scientificArt.doi}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.day}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.magazineName}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.imprint}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.language}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.rangge}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.impactFactor}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.standardTime}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.role}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.totalMember}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.totalAuthor}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.contributionRate}</p>
-                        <p className="text-gray-600 mb-2">{scientificArt.timeRole}</p>
-                      </div>
+                    <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                      <table className="table-auto w-full text-left">
+                        <tbody>
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 w-1/2 py-2">DOI, minh chứng bài báo</td>
+                            <td className="text-gray-600 py-2">{scientificArt.doi}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Ngày</td>
+                            <td className="text-gray-600 py-2">{scientificArt.day}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tên tạp chí, kỷ yếu</td>
+                            <td className="text-gray-600 py-2">{scientificArt.magazineName}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tên nhà xuất bản, đơn vị chủ quản</td>
+                            <td className="text-gray-600 py-2">{scientificArt.imprint}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Ngôn ngữ xuất bản</td>
+                            <td className="text-gray-600 py-2">{scientificArt.language}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Phạm vi, cấp độ </td>
+                            <td className="text-gray-600 py-2">{scientificArt.rangge}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Chỉ số Impact Factor(IF) nếu có</td>
+                            <td className="text-gray-600 py-2">{scientificArt.impactFactor}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Giờ chuẩn của hoạt động</td>
+                            <td className="text-gray-600 py-2">{scientificArt.standardTime}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Vai trò</td>
+                            <td className="text-gray-600 py-2">{scientificArt.role}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tổng số thành viên cùng vai trò</td>
+                            <td className="text-gray-600 py-2">{scientificArt.totalMember}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tống số tác giả</td>
+                            <td className="text-gray-600 py-2">{scientificArt.totalAuthor}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tỷ lệ đóng góp</td>
+                            <td className="text-gray-600 py-2">{scientificArt.contributionRate}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Giờ quy đổi theo vai trò</td>
+                            <td className="text-gray-600 py-2">{scientificArt.timeRole}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </td>
                 </tr>

@@ -32,8 +32,8 @@ const AddScientificReport = () => {
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="action1">Báo cáo hội nghị khoa học chuyên ngành được hội nghề nghiệp công nhận, chấp nhận</option>
-                            <option value="action2">Báo cáo hội thảo, sinh hoạt chuyên môn</option>
+                            <option value="actionRpt1">Báo cáo hội nghị khoa học chuyên ngành được hội nghề nghiệp công nhận, chấp nhận</option>
+                            <option value="actionRpt2">Báo cáo hội thảo, sinh hoạt chuyên môn</option>
                         </select>
                     </div>
 
@@ -85,10 +85,10 @@ const AddScientificReport = () => {
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="no1">Giải nhất</option>
-                            <option value="no2">Giải nhì</option>
-                            <option value="no3">Giải ba</option>
-                            <option value="no">Không</option>
+                            <option value="noRpt1">Giải nhất</option>
+                            <option value="noRpt2">Giải nhì</option>
+                            <option value="noRpt3">Giải ba</option>
+                            <option value="noRpt">Không</option>
                         </select>
                     </div>
 

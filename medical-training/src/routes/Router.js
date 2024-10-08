@@ -21,6 +21,10 @@ import AddScientificResTpc from '../pages/AddScientificResTpc';
 import AddSciResCou from '../pages/AddSciResCou';
 import AddDocument from '../pages/AddDocument';
 import AddScientificReport from '../pages/AddScientificReport';
+import ScientificConferences from '../page/ScientificConferences';
+import AddScientificCfs from '../pages/AddScientificCfs';
+import AddScientificResPro from '../pages/AddScientificResPro';
+import AddInitiative from '../pages/AddInitiative';
 
 const Router = () => {
   return (
@@ -46,8 +50,12 @@ const Router = () => {
         <Route path='/func/document/addDocument' element={<AddDocument/>}/>
         <Route path='/func/scientificReport' element={<ScientificReport/>}/>
         <Route path='/func/scientificReport/addSciReport' element={<AddScientificReport/>}/>
-        <Route path='/func/scientificResearchProduct' element={<ScientificResearchProduct/>}/>
+        <Route path='/func/scientificConferences' element={<ScientificConferences/>}/>
+        <Route path='/func/scientificConferences/addScientificCfs' element={<AddScientificCfs/>}/>
+        <Route path='/func/scientificResearchProduct' element={<ScientificResearchProduct/>}/> 
+        <Route path='/func/scientificResearchProduct/addScientificResPro' element={<AddScientificResPro/>}/>
         <Route path='/func/initiative' element={<Initiative/>}/>
+        <Route path='/func/initiative/addInitiative' element={<AddInitiative/>}/>
         <Route path='/func/statistic' element={<Statistic/>}/>
       </Route>
       {/* sidebar */}

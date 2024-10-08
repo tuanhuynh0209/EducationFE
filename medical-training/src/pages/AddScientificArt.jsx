@@ -33,11 +33,11 @@ const AddScientificArt = () => {
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="rangeSciArt1">Chưa có chỉ số ảnh hưởng (Impact Factor – IF) hoặc IF ≤ 0.5</option>
-                            <option value="rangeSciArt2">Có chỉ số ảnh hưởng IF &gt; 0.5 (tính theo năm kê khai)</option>
-                            <option value="rangeSciArt3">Chưa có trong danh mục tạp chí tính điểm công trình của Hội đồng Giáo sư Nhà nước</option>
-                            <option value="rangeSciArt4">Có điểm tối đa &lt; 0.5 điểm trong danh mục tạp chí tính điểm công trình của Hội đồng Giáo sư Nhà nước</option>
-                            <option value="rangeSciArt5">Có điểm tối đa từ 0.5 điểm trở lên trong danh mục tạp chí tính điểm công trình của Hội đồng Giáo sư Nhà nước</option>
+                            <option value="actionSciArt1">Chưa có chỉ số ảnh hưởng (Impact Factor – IF) hoặc IF ≤ 0.5</option>
+                            <option value="actionSciArt2">Có chỉ số ảnh hưởng IF &gt; 0.5 (tính theo năm kê khai)</option>
+                            <option value="actionSciArt3">Chưa có trong danh mục tạp chí tính điểm công trình của Hội đồng Giáo sư Nhà nước</option>
+                            <option value="actionSciArt4">Có điểm tối đa &lt; 0.5 điểm trong danh mục tạp chí tính điểm công trình của Hội đồng Giáo sư Nhà nước</option>
+                            <option value="actionSciArt5">Có điểm tối đa từ 0.5 điểm trở lên trong danh mục tạp chí tính điểm công trình của Hội đồng Giáo sư Nhà nước</option>
                         </select>
                     </div>
 

@@ -33,10 +33,10 @@ const AddScientificResTpc = () => {
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="rangeSciArt1">Đề tài NCKH đã được nghiệm thu</option>
-                            <option value="rangeSciArt2">Đề tài NCKH đã được phê duyệt</option>
-                            <option value="rangeSciArt3">Đề cương NCKH đã tham gia đấu thầu hoặc xét tuyển nhưng không được duyệt</option>
-                            <option value="rangeSciArt4">Phiếu đề xuất ý tưởng NCKH đã tham gia xét tuyển đối với các chương trình NCKH và CN nhưng không được phê duyệt</option>
+                            <option value="actionResTpc1">Đề tài NCKH đã được nghiệm thu</option>
+                            <option value="actionResTpc2">Đề tài NCKH đã được phê duyệt</option>
+                            <option value="actionResTpc3">Đề cương NCKH đã tham gia đấu thầu hoặc xét tuyển nhưng không được duyệt</option>
+                            <option value="actionResTpc4">Phiếu đề xuất ý tưởng NCKH đã tham gia xét tuyển đối với các chương trình NCKH và CN nhưng không được phê duyệt</option>
                         </select>
                     </div>
 
@@ -47,11 +47,11 @@ const AddScientificResTpc = () => {
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="rangeSciArt1">Cấp nhà nước hoặc có giá trị &gt; 1 tỉ đồng</option>
-                            <option value="rangeSciArt2">Cấp bộ-tỉnh/thành phố-nhánh cấp nhà nước hoặc có giá trị &gt; 500 triệu đồng</option>
-                            <option value="rangeSciArt3">Cấp bộ-tỉnh/thành phố-nhánh cấp nhà nước hoặc có giá trị 200 - 500 triệu đồng</option>
-                            <option value="rangeSciArt4">Cấp bộ-tỉnh/thành phố-nhánh cấp nhà nước hoặc có giá trị từ 100 đến &lt; 200 triệu đồng</option>
-                            <option value="rangeSciArt5">Cấp cơ sở hoặc có giá trị &lt; 100 triệu đồng</option>
+                            <option value="rangeSciResTpc1">Cấp nhà nước hoặc có giá trị &gt; 1 tỉ đồng</option>
+                            <option value="rangeSciResTpc2">Cấp bộ-tỉnh/thành phố-nhánh cấp nhà nước hoặc có giá trị &gt; 500 triệu đồng</option>
+                            <option value="rangeSciResTpc3">Cấp bộ-tỉnh/thành phố-nhánh cấp nhà nước hoặc có giá trị 200 - 500 triệu đồng</option>
+                            <option value="rangeSciResTpc4">Cấp bộ-tỉnh/thành phố-nhánh cấp nhà nước hoặc có giá trị từ 100 đến &lt; 200 triệu đồng</option>
+                            <option value="rangeSciResTpc5">Cấp cơ sở hoặc có giá trị &lt; 100 triệu đồng</option>
                         </select>
 
                     </div>
@@ -95,10 +95,10 @@ const AddScientificResTpc = () => {
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="rangeSciArt1">Chủ nhiệm và đồng chủ nhiệm: 50%</option>
-                            <option value="rangeSciArt2">Các thành viên chính và thư ký: 30%</option>
-                            <option value="rangeSciArt3">Thành viên: 15% (cho nhóm)</option>
-                            <option value="rangeSciArt4">KTV và thành phần khác: 5% (cho nhóm)</option>
+                            <option value="=roleSciResTpc1">Chủ nhiệm và đồng chủ nhiệm: 50%</option>
+                            <option value="=roleSciResTpc2">Các thành viên chính và thư ký: 30%</option>
+                            <option value="=roleSciResTpc3">Thành viên: 15% (cho nhóm)</option>
+                            <option value="=roleSciResTpc4">KTV và thành phần khác: 5% (cho nhóm)</option>
                         </select>
                     </div>
 

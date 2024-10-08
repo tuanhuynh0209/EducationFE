@@ -87,14 +87,14 @@ const ScientificReport = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((document, index) => (
+            {data.map((scientificReport, index) => (
               <React.Fragment key={index}>
                 <tr className="bg-gray-800 text-white border-b-2 border-white">
                   <td className="p-2">{index + 1}</td>
-                  <td className="p-2">{document.name}</td>
-                  <td className="p-2">{document.employeeId}</td>
-                  <td className="p-2">{document.action}</td>
-                  <td className="p-2">{document.nameReported}</td>
+                  <td className="p-2">{scientificReport.name}</td>
+                  <td className="p-2">{scientificReport.employeeId}</td>
+                  <td className="p-2">{scientificReport.action}</td>
+                  <td className="p-2">{scientificReport.nameReported}</td>
                   <td className="p-2">
                     <button onClick={() => toggleExpand(index)}>
                       {expandedIndex === index ? <ArrowDropUpOutlined /> : <ArrowDropDownOutlined />}
@@ -102,42 +102,85 @@ const ScientificReport = () => {
                   </td>
                 </tr>
                 <tr className={`transition-all duration-300 ${expandedIndex === index ? '' : 'hidden'}`}>
-                  <td className="p-4" colSpan="5">
-                    <div className="grid grid-cols-2 gap-8 text-left bg-gray-100 rounded-lg shadow-lg p-6">
-                      <div>
-                        <p className="font-semibold text-gray-700 mb-2">Tên đề tài đã báo cáo</p>
-                        <p className="font-semibold text-gray-700 mb-2">Minh chứng</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tên hội nghị khoa học đã báo cáo</p>
-                        <p className="font-semibold text-gray-700 mb-2">Đơn vị tổ chức</p>
-                        <p className="font-semibold text-gray-700 mb-2">Ngày</p>
-                        <p className="font-semibold text-gray-700 mb-2">Phạm vi</p>
-                        <p className="font-semibold text-gray-700 mb-2">Giải thưởng đạt được(nếu có)</p>
-                        <p className="font-semibold text-gray-700 mb-2">Hình thức báo cáo</p>
-                        <p className="font-semibold text-gray-700 mb-2">Giờ chuẩn quy đổi theo vai trò(tạm tính)</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tống số tác giả bài fulltext</p>
-                        <p className="font-semibold text-gray-700 mb-2">Vai trò trong bài fulltext</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tổng số tác giả cùng vai trò</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tỷ lệ đóng góp</p>
-                        <p className="font-semibold text-gray-700 mb-2">Giờ chuẩn quy đổi theo vai trò</p>
-                      </div>
-                      <div>
-                        <p className="text-gray-600 mb-2">{document.nameTopicReported}</p>
-                        <p className="text-gray-600 mb-2">{document.proof}</p>
-                        <p className="text-gray-600 mb-2">{document.nameConference}</p>
-                        <p className="text-gray-600 mb-2">{document.organizingUnit}</p>
-                        <p className="text-gray-600 mb-2">{document.day}</p>
-                        <p className="text-gray-600 mb-2">{document.range}</p>
-                        <p className="text-gray-600 mb-2">{document.prize}</p>
-                        <p className="text-gray-600 mb-2">{document.reportForm}</p>
-                        <p className="text-gray-600 mb-2">{document.standardTimeTempFt}</p>
-                        <p className="text-gray-600 mb-2">{document.totalMemFt}</p>
-                        <p className="text-gray-600 mb-2">{document.roleFt}</p>
-                        <p className="text-gray-600 mb-2">{document.sameRoleMemFt}</p>
-                        <p className="text-gray-600 mb-2">{document.contributionRate}</p>
-                        <p className="text-gray-600 mb-2">{document.standardTimeFt}</p>
-                      </div>
+
+                <td className="p-4" colSpan="5">
+                    <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                      <table className="table-auto w-full text-left">
+                        <tbody>
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 w-1/2 py-2">Tên đề tài đã báo cáo</td>
+                            <td className="text-gray-600 py-2">{scientificReport.nameTopicReported}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Minh chứng</td>
+                            <td className="text-gray-600 py-2">{scientificReport.proof}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tên hội nghị khoa học đã báo cáo</td>
+                            <td className="text-gray-600 py-2">{scientificReport.nameConference}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Đơn vị tổ chức</td>
+                            <td className="text-gray-600 py-2">{scientificReport.organizingUnit}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Ngày</td>
+                            <td className="text-gray-600 py-2">{scientificReport.day}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Phạm vi</td>
+                            <td className="text-gray-600 py-2">{scientificReport.range}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Giải thưởng đạt được(nếu có)</td>
+                            <td className="text-gray-600 py-2">{scientificReport.prize}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Hình thức báo cáo</td>
+                            <td className="text-gray-600 py-2">{scientificReport.reportForm}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Giờ chuẩn quy đổi theo vai trò(tạm tính)</td>
+                            <td className="text-gray-600 py-2">{scientificReport.standardTimeTempFt}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tống số tác giả bài fulltext</td>
+                            <td className="text-gray-600 py-2">{scientificReport.totalMemFt}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Vai trò trong bài fulltext</td>
+                            <td className="text-gray-600 py-2">{scientificReport.roleFt}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tổng số tác giả cùng vai trò</td>
+                            <td className="text-gray-600 py-2">{scientificReport.sameRoleMemFt}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tỷ lệ đóng góp</td>
+                            <td className="text-gray-600 py-2">{scientificReport.contributionRate}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Giờ chuẩn quy đổi theo vai trò</td>
+                            <td className="text-gray-600 py-2">{scientificReport.standardTimeFt}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </td>
+
                 </tr>
               </React.Fragment>
             ))}

@@ -156,26 +156,47 @@ const Information = () => {
                   </td>
                 </tr>
                 <tr className={`transition-all duration-300 ${expandedIndex === index ? '' : 'hidden'}`}>
+
                   <td className="p-4" colSpan="5">
-                    <div className="grid grid-cols-2 gap-8 text-left bg-gray-100 rounded-lg shadow-lg p-6">
-                      <div>
-                        <p className="font-semibold text-gray-700 mb-2">Chức danh, trình độ</p>
-                        <p className="font-semibold text-gray-700 mb-2">Viên chức hữu cơ</p>
-                        <p className="font-semibold text-gray-700 mb-2">Số giờ nghiên cứu khoa học định mức trong năm</p>
-                        <p className="font-semibold text-gray-700 mb-2">Trường hợp giảm định mức</p>
-                        <p className="font-semibold text-gray-700 mb-2">Số ngày</p>
-                        <p className="font-semibold text-gray-700 mb-2">Định mức giờ NCKH</p>
-                        <p className="font-semibold text-gray-700 mb-2">Ghi chú</p>
-                      </div>
-                      <div>
-                        <p className="text-gray-600 mb-2">{person.jobTitle}</p>
-                        <p className="text-gray-600 mb-2">{person.type}</p>
-                        <p className="text-gray-600 mb-2">{person.researchHours}</p>
-                        <p className="text-gray-600 mb-2">{person.reducedCase}</p>
-                        <p className="text-gray-600 mb-2">{person.days}</p>
-                        <p className="text-gray-600 mb-2">{person.researchQuota}</p>
-                        <p className="text-gray-600 mb-2">{person.notes}</p>
-                      </div>
+                    <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                      <table className="table-auto w-full text-left">
+                        <tbody>
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 w-1/2 py-2">Chức danh, trình độ</td>
+                            <td className="text-gray-600 py-2">{person.jobTitle}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Viên chức hữu cơ</td>
+                            <td className="text-gray-600 py-2">{person.type}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Số giờ nghiên cứu khoa học định mức trong năm</td>
+                            <td className="text-gray-600 py-2">{person.researchHours}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Trường hợp giảm định mức</td>
+                            <td className="text-gray-600 py-2">{person.reducedCase}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Số ngày</td>
+                            <td className="text-gray-600 py-2">{person.days}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Định mức giờ NCKH</td>
+                            <td className="text-gray-600 py-2">{person.researchQuota}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Ghi chú</td>
+                            <td className="text-gray-600 py-2">{person.notes}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </td>
                 </tr>

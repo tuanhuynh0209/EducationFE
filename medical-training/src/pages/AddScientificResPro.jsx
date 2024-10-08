@@ -1,10 +1,10 @@
 import React from 'react';
 
-const AddSciResCou = () => {
+const AddScientificResPro = () => {
     return (
         <div className='mx-8 w-full'>
             <div className='w-full'>
-                <span className='text-3xl font-bold'>Thêm tham gia hội đồng đánh giá, nghiệm thu đề tài NCKH cấp cơ sở </span>
+                <span className='text-3xl font-bold'>Đăng ký sở hữu trí tuệ, triển lãm sản phẩm khoa học công nghệ</span>
                 <hr className='my-4 border-gray-300' />
             </div>
             <div className='w-full h-full p-10 bg-white shadow-lg rounded-lg'>
@@ -26,32 +26,50 @@ const AddSciResCou = () => {
                         <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" disabled placeholder="Họ và tiên viên chức" />
                     </div>
 
-
                     <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Tên đề tài NCKH</p>
+                            <p className='font-medium text-lg'>Hoạt động</p>
                         </div>
-                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập tên đề tài" />
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập hoạt động" />
                     </div>
 
                     <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Số quyết định</p>
+                            <p className='font-medium text-lg'>Tên hội nghị khoa học đã tham dự</p>
                         </div>
-                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập số quyết định" />
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập đơn vị" />
                     </div>
 
                     <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Vai trò</p>
+                            <p className='font-medium text-lg'>Ngày</p>
+                        </div>
+                        <input type="date" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+                    </div>
+
+                    <div className="flex flex-col gap-1">
+                        <div className="flex gap-2 items-center">
+                            <p className='font-medium text-lg'>Phạm vi</p>
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="roleSciResCou1">Chủ tịch Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
-                            <option value="roleSciResCou2">Ủy viên thư ký Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
-                            <option value="roleSciResCou3">Ủy viên Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
-                            <option value="roleSciResCou4">Thành viên Hội đồng đánh giá đề cương đề tài NCKH cấp cơ sở </option>
+                            <option value="rangeIn">Hội nghị trong nước</option>
+                            <option value="rangeOut">Hội nghị Quốc tế</option>
                         </select>
+                    </div>
+
+                    <div className="flex flex-col gap-1">
+                        <div className="flex gap-2 items-center">
+                            <p className='font-medium text-lg'>Thời lượng tham dự (đơn vị tính: buổi)</p>
+                        </div>
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập tên sách, tài liệu" />
+                    </div>
+
+                    <div className="flex flex-col gap-1">
+                        <div className="flex gap-2 items-center">
+                            <p className='font-medium text-lg'>Giờ chuẩn hoạt động</p>
+                        </div>
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập giờ chuẩn'/>
                     </div>
 
                     <div className="flex flex-col gap-1">
@@ -72,4 +90,4 @@ const AddSciResCou = () => {
     )
 }
 
-export default AddSciResCou
+export default AddScientificResPro

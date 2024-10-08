@@ -8,6 +8,7 @@ import SKCT from '../image/SKCT.svg';
 import SPKHCN from '../image/SPKHCN.svg';
 import STL from '../image/STL.svg';
 import TTVC from '../image/TTVC.svg';
+import TGHNKH from '../image/TGHNKH.svg';
 import { NavLink } from 'react-router-dom';
 import DivCard from '../component/DivCard';
 import '../TopNav/topNav.css'
@@ -20,6 +21,7 @@ const Home = () => {
     { title: "Hội đồng nghiên cứu khoa học", icon: HDNCKH, link: "/func/scientificResearchCouncil" },
     { title: "Sách, tài liệu", icon: STL, link: "/func/document" },
     { title: "Báo cáo khoa học", icon: BCKH, link: "/func/scientificReport" },
+    { title: "Tham dự hội nghị khoa học", icon: TGHNKH, link: "/func/scientificConferences" },
     { title: "Sản phẩm KHCN", icon: SPKHCN, link: "/func/scientificResearchProduct" },
     { title: "Sáng kiến, cải tiến", icon: SKCT, link: "/func/initiative" },
     { title: "Bảng thống kê đào tạo", icon: BTKDT, link: "/func/statistic" }

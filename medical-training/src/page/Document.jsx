@@ -19,7 +19,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   },
   {
     name: 'Tiêu Trí Quang',
@@ -35,7 +35,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   },
   {
     name: 'Đặng Duy Thái',
@@ -51,7 +51,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   },
   {
     name: 'Nguyễn Thành Duy',
@@ -67,7 +67,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   },
   {
     name: 'Nguyễn Đức Vinh',
@@ -83,7 +83,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   },
   {
     name: 'Ngô Trần Hoàng Phát',
@@ -99,7 +99,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   },
   {
     name: 'Huỳnh Vũ Anh Tuấn',
@@ -115,7 +115,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   },
   {
     name: 'Huỳnh Vũ Anh Tuấn',
@@ -131,7 +131,7 @@ const data = [
     totalMem: 200,
     totalPageInCharge: 11,
     contributionRate: 11,
-    timeRole: 10, 
+    timeRole: 10,
   }
 ];
 // Additional data entries here...
@@ -190,32 +190,62 @@ const Document = () => {
                   </td>
                 </tr>
                 <tr className={`transition-all duration-300 ${expandedIndex === index ? '' : 'hidden'}`}>
+
                   <td className="p-4" colSpan="5">
-                    <div className="grid grid-cols-2 gap-8 text-left bg-gray-100 rounded-lg shadow-lg p-6">
-                      <div>
-                        <p className="font-semibold text-gray-700 mb-2">Tái bản, xuất bản</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tống số trang sách, tài liệu</p>
-                        <p className="font-semibold text-gray-700 mb-2">Ngôn ngữ xuất bản</p>
-                        <p className="font-semibold text-gray-700 mb-2">Ngày xuất bản, thẩm định, nghiệm thu</p>
-                        <p className="font-semibold text-gray-700 mb-2">Giờ chuẩn hoạt động</p>
-                        <p className="font-semibold text-gray-700 mb-2">Vai trò</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tổng số thành viên ban biên soạn</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tổng số trang phụ trách</p>
-                        <p className="font-semibold text-gray-700 mb-2">Tỉ lệ đóng góp</p>
-                        <p className="font-semibold text-gray-700 mb-2">Giờ chuẩn quy đổi theo vai trò</p>
-                      </div>
-                      <div>
-                        <p className="text-gray-600 mb-2">{document.reprint}</p>
-                        <p className="text-gray-600 mb-2">{document.totalPage}</p>
-                        <p className="text-gray-600 mb-2">{document.language}</p>
-                        <p className="text-gray-600 mb-2">{document.dayReprint}</p>
-                        <p className="text-gray-600 mb-2">{document.standardTime}</p>
-                        <p className="text-gray-600 mb-2">{document.role}</p>
-                        <p className="text-gray-600 mb-2">{document.totalMem}</p>
-                        <p className="text-gray-600 mb-2">{document.totalPageInCharge}</p>
-                        <p className="text-gray-600 mb-2">{document.contributionRate}</p>
-                        <p className="text-gray-600 mb-2">{document.timeRole}</p>
-                      </div>
+                    <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                      <table className="table-auto w-full text-left">
+                        <tbody>
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 w-1/2 py-2">Tái bản, xuất bản</td>
+                            <td className="text-gray-600 py-2">{document.reprint}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tống số trang sách, tài liệu</td>
+                            <td className="text-gray-600 py-2">{document.totalPage}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Ngôn ngữ xuất bản</td>
+                            <td className="text-gray-600 py-2">{document.language}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Ngày xuất bản, thẩm định, nghiệm thu</td>
+                            <td className="text-gray-600 py-2">{document.dayReprint}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Giờ chuẩn hoạt động</td>
+                            <td className="text-gray-600 py-2">{document.standardTime}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Vai trò</td>
+                            <td className="text-gray-600 py-2">{document.role}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tổng số thành viên ban biên soạn</td>
+                            <td className="text-gray-600 py-2">{document.totalMem}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tổng số trang phụ trách</td>
+                            <td className="text-gray-600 py-2">{document.totalPageInCharge}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Tỉ lệ đóng góp</td>
+                            <td className="text-gray-600 py-2">{document.contributionRate}</td>
+                          </tr>
+
+                          <tr className="py-2">
+                            <td className="font-semibold text-gray-700 py-2">Giờ chuẩn quy đổi theo vai trò</td>
+                            <td className="text-gray-600 py-2">{document.timeRole}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </td>
                 </tr>

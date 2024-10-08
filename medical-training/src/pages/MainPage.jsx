@@ -8,6 +8,7 @@ import SKCT from '../image/SKCT1.svg';
 import SPKHCN from '../image/SPKHCN1.svg';
 import STL from '../image/STL1.svg';
 import TTVC from '../image/TTVC1.svg';
+import TGHNKH from '../image/TGHNKH1.svg';
 import { NavLink, Outlet } from 'react-router-dom';
 import '../styles/sideBar.css';
 // Define your navigation links array
@@ -18,10 +19,12 @@ const navLinks = [
     { path: "/func/scientificResearchCouncil", icon: HDNCKH, display: "Hội đồng NCKH cấp cơ sở" },
     { path: "/func/document", icon: STL, display: "Sách, tài liệu" },
     { path: "/func/scientificReport", icon: BCKH, display: "Báo cáo khoa học" },
+    { path: "/func/scientificConferences", icon: TGHNKH, display: "Tham dự hội nghị khoa học" },
     { path: "/func/scientificResearchProduct", icon: SPKHCN, display: "Sản phẩm KHCN" },
     { path: "/func/initiative", icon: SKCT, display: "Sáng kiến, cải tiến" },
     { path: "/func/statistic", icon: BTKDT, display: "BTK đào tạo y khoa" },
 ];
+
 
 const MainPage = () => {
     return (
@@ -48,7 +51,7 @@ const MainPage = () => {
                     placeholder="Tìm kiếm..."
                     className="bg-[#F9A150] rounded-lg p-3.5 outline-none mb-4 text-white"
                 />
-                
+
             </div>
 
             {/* Main content */}
@@ -58,25 +61,29 @@ const MainPage = () => {
 
 
                     <ul className="nav__list space-y-4">
-                        {navLinks.map((item, index) => (
-                            <li key={index} className="nav__item">
-                                <NavLink
-                                    to={item.path}
-                                    className={(navClass) =>
-                                        navClass.isActive ? "nav__active nav__link " : "nav__link "
-                                    }
-                                >
-                                    <img src={item.icon} alt={item.display} className="w-6 h-6" />
-                                    <p>{item.display}</p>
-                                </NavLink>
-                            </li>
-                        ))}
+                        {navLinks.map((item, index) => {
+                            ;
+                            return (
+                                <li key={index} className="nav__item">
+                                    <NavLink
+                                        to={item.path}
+                                        className={(navClass) =>
+                                            navClass.isActive ? "nav__active nav__link " : "nav__link "
+                                        }
+                                    >
+                                        <img src={item.icon} alt={item.display} className="w-6 h-6" />
+                                        <p>{item.display}</p>
+                                    </NavLink>
+                                </li>
+                            );
+                        })}
+
                     </ul>
                 </aside>
 
                 {/* Right side - Main content */}
                 <div className='height-div2 h-full flex flex-row flex-wrap'>
-                    
+
                     <Outlet />
                 </div>
             </div>

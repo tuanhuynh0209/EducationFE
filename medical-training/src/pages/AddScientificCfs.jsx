@@ -1,10 +1,10 @@
 import React from 'react';
 
-const AddDocument = () => {
+const AddScientificCfs = () => {
     return (
         <div className='mx-8 w-full'>
             <div className='w-full'>
-                <span className='text-3xl font-bold'>Thêm sách, tài liệu</span>
+                <span className='text-3xl font-bold'>Thêm tham gia hội nghị khoa học</span>
                 <hr className='my-4 border-gray-300' />
             </div>
             <div className='w-full h-full p-10 bg-white shadow-lg rounded-lg'>
@@ -28,61 +28,52 @@ const AddDocument = () => {
 
                     <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Hoạt động</p>
+                            <p className='font-medium text-lg'>Hoạt động đã đạt</p>
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="actionDoc1">Biên dịch tài liệu</option>
-                            <option value="actionDoc2">Biên soạn Sách chuyên khảo</option>
-                            <option value="actionDoc3">Biên soạn giáo trình</option>
-                            <option value="actionDoc4">Biên soạn Sách tham khảo</option>
+                            <option value="actionSciCfs1">Giấy chứng nhận sáng chế độc quyền (patent)</option>
+                            <option value="actionSciCfs2">Giấy chứng nhận giải pháp hữu ích</option> 
+                            <option value="actionSciCfs3">Giấy chứng nhận đăng ký nhãn hiệu sản phẩm phát triển từ đề tài NCKH</option>
+                            <option value="actionSciCfs4">Giấy chứng nhận giải pháp hữu ích</option>
                         </select>
                     </div>
 
                     <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Tái bản, xuất bản</p>
+                            <p className='font-medium text-lg'>Tên sản phẩm, giải pháp, nhãn hiệu đã được cấp chứng nhận hoặc giới thiệu tại hội chợ, triển lãm</p>
+                        </div>
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập thông tin" />
+                    </div>
+
+                    <div className="flex flex-col gap-1">
+                        <div className="flex gap-2 items-center">
+                            <p className='font-medium text-lg'>Đơn vị cấp chứng nhận, tổ chức</p>
+                        </div>
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập đơn vị" />
+                    </div>
+
+                    <div className="flex flex-col gap-1">
+                        <div className="flex gap-2 items-center">
+                            <p className='font-medium text-lg'>Minh chứng</p>
+                        </div>
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập minh chứng" />
+                    </div>
+
+                    <div className="flex flex-col gap-1">
+                        <div className="flex gap-2 items-center">
+                            <p className='font-medium text-lg'>Phạm vi</p>
                         </div>
                         <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
                             <option value="">Ấn vào để chọn</option>
-                            <option value="reprint">Tái bản</option>
-                            <option value="publish">Xuất bản</option>
-                        </select>
-
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                        <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Tên sách, tài liệu</p>
-                        </div>
-                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập tên sách, tài liệu" />
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                        <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Tổng số trang sách, tài liệu</p>
-                        </div>
-                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập số trang" />
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                        <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Ngôn ngữ xuất bản</p>
-                        </div>
-                        <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
-                            <option value="">Ấn vào để chọn</option>
-                            <option value="languageDoc1">Tiếng Việt</option>
-                            <option value="languageDoc2">Tiếng Nga</option>
-                            <option value="languageDoc3">Tiếng Đức</option>
-                            <option value="languageDoc4">Tiếng Anh</option>
-                            <option value="languageDoc5">Tiếng Pháp</option>
-                            <option value="languageDoc6">Tiếng Trung</option>
+                            <option value="rangeIn">Trong nước</option>
+                            <option value="rangeOut">Quốc tế</option> 
                         </select>
                     </div>
 
                     <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Ngày xuất bản, thẩm định, nghiệm thu</p>
+                            <p className='font-medium text-lg'>Ngày</p>
                         </div>
                         <input type="date" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
                     </div>
@@ -96,28 +87,9 @@ const AddDocument = () => {
 
                     <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Vai trò</p>
+                            <p className='font-medium text-lg'>Tỷ lệ đóng góp theo hồ sơ</p>
                         </div>
-                        <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
-                            <option value="">Ấn vào để chọn</option>
-                            <option value="roleEditor">Chủ biên</option>
-                            <option value="roleSecretary">Thư ký</option>
-                            <option value="roleMem">Thành viên biên soạn (bao gồm cả chủ biên)</option>
-                        </select>
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                        <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Tống số thành viên phụ trách</p>
-                        </div>
-                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập tống số thành viên" />
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                        <div className="flex gap-2 items-center">
-                            <p className='font-medium text-lg'>Tỷ lệ đóng góp</p>
-                        </div>
-                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập phần trăm" />
+                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder='Nhập số liệu'/>
                     </div>
 
                     <div className="flex flex-col gap-1">
@@ -138,4 +110,4 @@ const AddDocument = () => {
     )
 }
 
-export default AddDocument
+export default AddScientificCfs

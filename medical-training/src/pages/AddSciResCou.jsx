@@ -1,6 +1,35 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 const AddSciResCou = () => {
+    const [role, setRole] = useState();
+    const [standardTime, setStandardtTime] = useState();
+
+    const calculateStandardTimeConversionRole = useCallback(() => {
+        let num = 0;
+        switch (role) {
+            case "roleSciResCou1":
+                num = 4;
+                break;
+            case "roleSciResCou2":
+                num = 3;
+                break;
+            case "roleSciResCou3":
+                num = 3;
+                break;
+            case "roleSciResCou4":
+                num = 2;
+                break;
+            default:
+                num = 0;
+        }
+
+        setStandardtTime(num);
+    }, [role]);
+
+    useEffect(() => {
+        calculateStandardTimeConversionRole();
+    }, [calculateStandardTimeConversionRole]);
+
     return (
         <div className='mx-8 w-full'>
             <div className='w-full'>
@@ -45,12 +74,12 @@ const AddSciResCou = () => {
                         <div className="flex gap-2 items-center">
                             <p className='font-medium text-lg'>Vai trò</p>
                         </div>
-                        <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300">
+                        <select className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" onChange={(e) => { setRole(e.target.value); calculateStandardTimeConversionRole(); }}>
                             <option value="">Ấn vào để chọn</option>
-                            <option value="roleSciResCou1">Chủ tịch Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
-                            <option value="roleSciResCou2">Ủy viên thư ký Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
-                            <option value="roleSciResCou3">Ủy viên Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
-                            <option value="roleSciResCou4">Thành viên Hội đồng đánh giá đề cương đề tài NCKH cấp cơ sở </option>
+                            <option value="roleSciResCou1">1. Chủ tịch Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
+                            <option value="roleSciResCou2">2. Ủy viên thư ký Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
+                            <option value="roleSciResCou3">3. Ủy viên Hội đồng nghiệm thu kết quả đề tài NCKH cấp cơ sở</option>
+                            <option value="roleSciResCou4">4. Thành viên Hội đồng đánh giá đề cương đề tài NCKH cấp cơ sở </option>
                         </select>
                     </div>
 
@@ -58,7 +87,7 @@ const AddSciResCou = () => {
                         <div className="flex gap-2 items-center">
                             <p className='font-medium text-lg'>Giờ chuẩn quy đổi theo vai trò(tạm tính)</p>
                         </div>
-                        <input type="text" className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập số giờ" />
+                        <input type="text" value={standardTime} className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập số giờ" />
                     </div>
 
                     <div className='w-full flex justify-center mt-6'>

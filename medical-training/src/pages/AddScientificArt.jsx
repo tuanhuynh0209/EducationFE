@@ -16,7 +16,6 @@ const AddScientificArt = () => {
     const calculateStandardHours = useCallback(() => {
         let hours = 0;
         const impactValue = parseFloat(impactFactor) || 0;
-
         if (activity === "actionSciArt1" || activity === "actionSciArt2") {
             hours = impactValue <= 0.5 ? 160 : 320 * impactValue;
         } else if (activity === "actionSciArt3") {
@@ -26,7 +25,6 @@ const AddScientificArt = () => {
             if (scope === "rangeSciArt4") hours += 20;
             else if (scope === "rangeSciArt5") hours += 40;
         }
-
         setStandardHours(hours);
     }, [impactFactor, language, activity, scope]);
 
@@ -46,7 +44,6 @@ const AddScientificArt = () => {
             default:
                 contributionFromRole = 0;
         }
-
         const contributionPercentage = (contributionFromRole / totalMembersWithSameRole) + (0.6 / totalAuthors);
         setContributionPercentage(contributionPercentage);
     }, [role, totalMembersWithSameRole, totalAuthors]);
@@ -56,7 +53,7 @@ const AddScientificArt = () => {
         setRoleConversionHours(timeRole);
     }, [standardHours, contributionPercentage]);
 
-    // Update when any related value changes
+    // Cập nhật khi dữ liệu thay đổi
     useEffect(() => {
         calculateStandardHours();
         calculateContributionPercentage();
@@ -186,10 +183,15 @@ const AddScientificArt = () => {
                         <div className="flex gap-2 items-center">
                             <p className='font-medium text-lg'>Giờ chuẩn hoạt động</p>
                         </div>
-                        <input type="number" value={standardHours} readOnly className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" />
+                        <input
+                            type="number"
+                            value={isNaN(standardHours) ? '' : standardHours}
+                            readOnly
+                            className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300"
+                        />
                     </div>
-                     {/* Role selection */}
-                     <div className="flex flex-col gap-1">
+                    {/* Role selection */}
+                    <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-center">
                             <p className="font-medium text-lg">Vai trò</p>
                         </div>
@@ -212,10 +214,9 @@ const AddScientificArt = () => {
                         </div>
                         <input
                             type="number"
+                            value={totalMembersWithSameRole || ''}
+                            onChange={(e) => setTotalMembersWithSameRole(Number(e.target.value) || 0)}
                             className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300"
-                            placeholder="Nhập tổng số thành viên"
-                            value={totalMembersWithSameRole}
-                            onChange={(e) => setTotalMembersWithSameRole(Number(e.target.value))}
                         />
                     </div>
 
@@ -240,8 +241,7 @@ const AddScientificArt = () => {
                         </div>
                         <input
                             type="number"
-                            value={(contributionPercentage * 100).toFixed(1)}
-                            readOnly
+                            readOnly={(contributionPercentage * 100).toFixed(0)}
                             className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300"
                         />
                     </div>
@@ -249,7 +249,12 @@ const AddScientificArt = () => {
                         <div className="flex gap-2 items-center">
                             <p className='font-medium text-lg'>Giờ quy đổi theo vai trò(tạm tính)</p>
                         </div>
-                        <input type="text" value={roleConversionHours} className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300" placeholder="Nhập nhập giờ quy đổi theo vai trò" />
+                        <input
+                            type="number"
+                            value={isNaN(roleConversionHours) ? '' : roleConversionHours}
+                            readOnly
+                            className="bg-slate-100 rounded-lg p-4 outline-none border border-gray-300"
+                        />
                     </div>
 
                     <div className='w-full flex justify-center mt-6'>
